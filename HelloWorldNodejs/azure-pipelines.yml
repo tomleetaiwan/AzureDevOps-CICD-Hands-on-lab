@@ -1,0 +1,85 @@
+# 以 Docker Container 方式部署一個 Node.js 應用程式至 Azure Web App for Containers Linux
+# 更多資訊請參閱 https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-rm-web-app-deployment
+# 各種語言 Azure DevOps Build YAML 範本可參閱 https://github.com/microsoft/azure-pipelines-yaml/tree/master/templates
+
+trigger:
+- master
+
+resources:
+- repo: self
+
+variables:
+  # ========================================================================
+  #                          主要變數，請填入您對應的內容
+  # ========================================================================
+
+  # 變數 Azure.ResourceGroupName 值請填入您所建立的的 Azure 資源群組名稱.
+  Azure.ResourceGroupName: 'myDevOpsResourceGroup'
+
+  # 變數 Azure.ServiceConnectionId 請填入您在 Azure DevOps 內建立的 Service connections 名稱.
+  Azure.ServiceConnectionId: 'MyAzureConnection'
+
+  # 變數 Azure.Location 填入您所建立的的 Azure 資源群組名稱所在之資料中心.
+  Azure.Location: 'southeastasia'
+
+  # 變數 ACR.Name 請填入您所建立的 Azure Container Registry (ACR) 名稱.
+  ACR.Name: '<您的 ACR 名稱>'
+  
+  # 變數 Web.Name 請填入您所建立的 Azure Web App for Containers Linux 名稱
+  WebApp.Name: '<您的 Azure Web App for Containers Linux 名稱>'
+  
+  # 變數 ServicePlan.Name 請填入您所建立的 Azure App Service Plan 名稱
+  ServicePlan.Name: '<您的 Azure App Service Plan 名稱>'
+
+  # 變數 MyImageName 請填入 Docker Image 標籤名稱，未來會以 MyImageName:Build# 方式放在 ACR 內
+  MyImageName: 'nodejs-app'
+  # ========================================================================
+  #                           衍伸變數與除錯用途設定
+  # ========================================================================
+  
+  ACR.ImageName: '$(MyImageName):$(Build.BuildId)'
+  ACR.FullName: '$(ACR.Name).azurecr.io'
+  System.Debug: 'false'
+
+jobs:
+ 
+- job: BuildImage
+  displayName: Build
+  condition: succeeded()
+
+  pool:
+    vmImage: 'ubuntu-latest'
+
+  steps:
+  - task: Docker@1
+    displayName: 'Build an image'
+    inputs:
+      azureSubscriptionEndpoint: '$(Azure.ServiceConnectionId)'
+      azureContainerRegistry: '$(ACR.FullName)'
+      imageName: '$(ACR.ImageName)'
+      command: build
+      dockerFile: '**/Dockerfile'
+
+  - task: Docker@1
+    displayName: 'Push an image'
+    inputs:
+      azureSubscriptionEndpoint: '$(Azure.ServiceConnectionId)'
+      azureContainerRegistry: '$(ACR.FullName)'
+      imageName: '$(ACR.ImageName)'
+      command: push
+
+- job: DeployApp
+  displayName: Deploy
+  dependsOn: BuildImage
+  condition: succeeded()
+
+  pool:
+    vmImage: 'ubuntu-latest'
+
+  steps:
+  - task: AzureWebAppContainer@1
+    displayName: 'Azure Web App on Container Deploy: $(WebApp.Name)'
+    inputs:
+      azureSubscription: '$(Azure.ServiceConnectionId)'
+      appName: $(WebApp.Name)
+      imageName: '$(ACR.FullName)/$(ACR.ImageName)'

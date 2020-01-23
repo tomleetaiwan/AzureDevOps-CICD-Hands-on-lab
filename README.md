@@ -34,11 +34,11 @@
 ![Hyper-V 管理員](images/hypervmanager.png)
 
 ## 其他所需工具
-* 下載安裝 [Visual Studio Code](https://code.visualstudio.com/Download) Windows 64 bit 版本
+* 下載安裝 [Visual Studio Code](https://code.visualstudio.com/Download) Windows 64 bit 版本，Visual Studio Code 內建了 Git 2.0 功能，您也可以安裝完整的 [Git for Windows](https://gitforwindows.org/) 以其他方式體驗 Git 版本管控。
 * 下載安裝 [Nodejs 12.xx](https://nodejs.org/zh-tw/download/) Windows 64 bit 版本
 
 ## Azure DevOps 免費帳號
-* 請至 [Azure DevOps 首頁](https://azure.microsoft.com/zh-tw/services/devops/)，點選申請免信用卡免費帳號
+* 請至 [Azure DevOps 首頁](https://azure.microsoft.com/zh-tw/services/devops/)，點選申請免費帳號，Azure DevOps 無須信用卡即可取得免費帳號。
 ![Azure DevOps 免費帳號申請](images/azure-devops.png)
 
 ## Lab [???] 之後會使用到 Microsoft Azure，需準備妥
@@ -46,8 +46,8 @@
 * 下載安裝 [Azure CLI 2.0.77](https://docs.microsoft.com/zh-tw/cli/azure/install-azure-cli?view=azure-cli-latest) 之後版本 
 
 ## Lab 1 - Lab 8 內容說明
-* [前往練習 Lab 1](Labs-01.md) : ???
-* [前往練習 Lab 2](Labs-02.md) : ???
+* [前往練習 Lab 1](Labs-01.md) : 在 Azure DevOps 內建立組織 (Organization) 與專案 (Project)
+* [前往練習 Lab 2](Labs-02.md) : 在 Azure DevOps 內建立程式碼儲存庫 (Repos) 與加入程式碼
 * [前往練習 Lab 3](Labs-03.md) : ???
 * [前往練習 Lab 4](Labs-04.md) : ???
 * [前往練習 Lab 5](Labs-05.md) : ???

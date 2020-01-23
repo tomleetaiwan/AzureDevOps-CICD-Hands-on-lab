@@ -1,6 +1,5 @@
 # Azure DevOps 持續整合/持續交付 (CI/CD,Continuous Integration Continuous Delivery) 功能實機操作
 
-
 ## Lab 1 在 Azure DevOps 內建立組織 (Organization) 與專案 (Project)
 1.當您已經擁有 Azure DevOps 免費帳號之後，請以瀏覽器登入 https://dev.azure.com/ 進入 Azure DevOps 入口管理網站。
 

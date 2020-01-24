@@ -4,7 +4,7 @@
 
 ### 建立 Azure Container Registry (ACR)
 
-1.在命令列模式下，如下鍵入指令以確認目前環境已經安裝妥了 Azure CLI 2.0.77 之後版本，若版本太舊或沒有安裝 Azure CLI 先[下載](https://docs.microsoft.com/zh-tw/cli/azure/install-azure-cli?view=azure-cli-latest) 並安裝妥 Azure CLI。 
+1.在命令列模式下，如下鍵入指令以確認目前環境已經安裝妥了 Azure CLI 2.0.80 之後版本，若版本太舊或沒有安裝 Azure CLI 先[下載](https://docs.microsoft.com/zh-tw/cli/azure/install-azure-cli?view=azure-cli-latest) 並安裝妥 Azure CLI。 
 ```powershell
 az --version
 ```
@@ -55,7 +55,11 @@ docker images
 docker push <ACR 名稱>.azurecr.io/nodejs-app:0.1
 ```
 
-5.以瀏覽器進入 [Azure Portal](https://portal.azure.com) 確認映像檔已經順利儲存於此一私有的 Azure Container Registry 之中。亦可以透過 Azure CLI 列出此私有 Container Registry 內所有的 Respsitory 名稱
+5.以瀏覽器進入 [Azure Portal](https://portal.azure.com) 確認映像檔已經順利儲存於此一私有的 Azure Container Registry 之中。
+
+![以瀏覽器進入 Azure Portal 驗證](./images/container-reg1.png)
+
+亦可以透過 Azure CLI 列出此私有 Container Registry 內所有的 Respsitory 名稱
 
 ```powershell
 az acr repository list -n <ACR 名稱> -o table
@@ -66,7 +70,29 @@ az acr repository list -n <ACR 名稱> -o table
 az acr repository show-tags -n <ACR 名稱> --repository <Repository 名稱> -o table
 ```
 
-日後只要有權限登入使用此一 Azure Container Registry 的帳號即可以用 **<ACR 名稱>.azurecr.io/nodejs-app:1.0** 的名稱取用此映像檔，請暫時保留本 Lab 所建立之環境以供後續 Lab 使用。
+日後只要有權限存取此 Azure Container Registry 的帳號或 Azure 服務，即可以用 **<ACR 名稱>.azurecr.io/nodejs-app:0.1** 的名稱取用此映像檔
+
+6.其他的 Azure 服務若要存取此 Azure Container Registry 內的映像檔有幾種方式，一種是透過在 Azure AD 內所註冊建立之服務主體 ( Service Principal )，或是透過標準存取 Docker Registry 的系統管理帳號與密碼，使用系統管理帳號與密碼是比較不安全的方法，然而 Azure Container Registry 仍支援此方式，我們可用瀏覽器進入 [Azure Portal](https://portal.azure.com) 如下圖點選 **Access Keys**，並將 **Admin user** 設定為 **Enable**，此時系統管理帳號與密碼將顯示於圖中所標示之位置。
+
+![以瀏覽器進入 Azure Portal 驗證](./images/container-reg2.png)
+
+我們也可以透過 Azure CLI 如下啟用系統管理帳號與密碼:
+
+```powershell
+az acr update -n <ACR 名稱> --admin-enabled true
+```
+與更進一步列顯示出系統管理帳號與密碼
+
+```powershell
+az acr credential show -n <ACR 名稱>
+```
+
+請保留本 Lab 所建立之環境，並記錄
+* Azure Container Registy (ACR) 名稱
+* Azure Container Registy (ACR) 系統管理帳號
+* Azure Container Registy (ACR) 系統管理密碼
+
+以供後續 Lab 使用。
 
 * [前往練習 Lab 4](Labs-04.md)
 * [返回 README](README.md)

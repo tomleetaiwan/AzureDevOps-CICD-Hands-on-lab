@@ -39,8 +39,11 @@ server.listen(port, ipv4, () => {
 ```powershell
 node index.js
 ```
+![Nodejs 程式執行](./images/nodeserver.png)
 
-4.開啟瀏覽器連線至本機 http://localhost:9876 測試此 Nodejs 網頁應用程式，預期順利執行會回傳 Hello World 字樣網頁，而畫面中則該顯示您的電腦名稱。
+4.開啟瀏覽器連線至本機 http://localhost:9876 測試此 Nodejs 網頁應用程式，預期如下圖般順利執行回傳 **Hello Wolrd!** 字樣網頁，而畫面中則該顯示您的電腦名稱。
+
+![以瀏覽器測試](./images/browser1.png)
 
 5.命令列模式下鍵入 Ctrl-C 終止 node index.js 之執行，此時開啟瀏覽器連線至本機 http://localhost:9876 將無法順利顯示網頁
 
@@ -77,20 +80,24 @@ docker images
 
 | REPOSITORY  | TAG    | IMAGE ID     | CREATED       | SIZE   |
 |-------------|--------|--------------|---------------|--------|
-| nodejs-app | 0.1 | 148ab6e0b173 | 14 seconds ago | 913MB |
+| nodejs-app | 0.1 | a86ebf61e774 | 14 seconds ago | 913MB |
 
 9.在命令列模式下，鍵入如下命令建立容器，能夠在背景執行狀況下於 Port 9999 上準備接收 HTTP 請求
 ```powershell
 docker run -d -p 9999:9876 nodejs-app:0.1 
 ```
-10.開啟瀏覽器連線至此容器 http://localhost:9999 測試此 Nodejs 網頁應用程式，預期順利執行會回傳 Hello World 字樣網頁，如果鍵入以下指令
+10.開啟瀏覽器連線至此容器 http://localhost:9999 測試此 Nodejs 網頁應用程式，預期如下圖般順利執行回傳 **Hello Wolrd!** 字樣網頁，而畫面中則該顯示您的電腦名稱。
+
+![以瀏覽器測試](./images/browser2.png)
+
+如果鍵入以下指令
 ```powershell
 docker ps
 ```
 
 | CONTAINER ID | IMAGE   | COMMAND                | CREATED       | STATUS | PORTS                              | NAMES          |
 |--------------|---------|------------------------|---------------|--------|------------------------------------|----------------|
-| 66f8280f7650 | nodejs-app:0.1 | "docker-entrypoint.s…" | 2 minutes ago |  Up 35 seconds | 0.0.0.0:9999 ->9876/tcp | reverent_haibt |
+| f84465751370 | nodejs-app:0.1 | "docker-entrypoint.s…" | 2 minutes ago |  Up 35 seconds | 0.0.0.0:9999 ->9876/tcp | reverent_haibt |
 
 我們也可發現 Nodejs 程式所取得的電腦名稱與 CONTAINER ID 會相符。
 
@@ -98,7 +105,7 @@ docker ps
 ```powershell
 docker rm <CONTAINER ID> -f
 ```
-此時開啟瀏覽器連線至本機 http://localhost:9999 將無法順利顯示網頁。至此代表開發中的應用程式已經可以順利在本機 Windows 10 的容器環境中執行，我們即將把程式碼存放至本機的 Git 儲存庫以及雲端的 Azure DevOps Repo 儲存庫。
+此時開啟瀏覽器連線至本機 http://localhost:9999 將無法順利顯示網頁。至此代表開發中的應用程式已經在 Windows 10 開發環境測試告一段落，程式如我們預期可以順利執行，接下來我們即將把程式碼存放至本機的 Git 儲存庫以及雲端的 Azure DevOps Repo 儲存庫。
 
 12.如圖請在 Visual Studio Code 內點選版本管控 (Source Control) 圖示，可以看到我們所建立的 Nodejs 應用程式 index.js 與 Dockerfile 等檔案，我們可以在文字方塊內輸入 "首次內容" 作為註解，接著按下 **✓** Commit 符號即可將相關檔案納入本機 Git 儲存庫的管理。Visual Studio Code 對於 Commit 操作預設是合併了 git add 與 git commit 兩個動作，對初學者而言是比較簡單。
 

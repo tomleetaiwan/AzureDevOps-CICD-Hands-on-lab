@@ -1,6 +1,6 @@
 # Azure DevOps 持續整合/持續交付 (CI/CD,Continuous Integration Continuous Delivery) 功能實機操作
 
-## Lab 3 建立 Azure Web App for Containers - Linux 與 Azure Container Registry
+## Lab 3 建立 Azure Container Registry 並推送 Docker 映像檔
 
 ### 建立 Azure Container Registry (ACR)
 

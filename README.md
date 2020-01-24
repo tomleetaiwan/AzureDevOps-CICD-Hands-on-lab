@@ -49,7 +49,7 @@
 ## Lab 1 - Lab 8 內容說明
 * [前往練習 Lab 1](Labs-01.md) : 在 Azure DevOps 內建立組織 (Organization) 與專案 (Project)
 * [前往練習 Lab 2](Labs-02.md) : 在 Azure DevOps 內建立儲存庫 (Repos) 並加入程式碼
-* [前往練習 Lab 3](Labs-03.md) : 建立 Azure Container Registry
+* [前往練習 Lab 3](Labs-03.md) : 建立 Azure Container Registry 並推送 Docker 映像檔
 * [前往練習 Lab 4](Labs-04.md) : <待定>
 * [前往練習 Lab 5](Labs-05.md) : <待定>
 * [前往練習 Lab 6](Labs-06.md) : <待定>

@@ -2,7 +2,7 @@
 
 此實機操作練習是以 Windows 10 用戶運用 Azure DevOps 進行持續整合/持續交付 (CI/CD) 之情境所設計，並以 Microsoft Azure 相關容器服務作為練習的平台。請注意此系列操作練習目的在於體驗 CI/CD 概念，相關組態配置並非考量真實營運環境的最佳架構。
 
-在練習過程中使用 Azure App Service Web App for Container Linx 基本服務方案 B1 等級規格，每一個執行個體每小時產生 NT$0.91 費用，每月產生約 NT$593 費用，Azure Container Regisrty 基本版則是每月產生約 NT$155 費用，實機練習完畢後如果將相關 Azure 資源刪除就不再產生任何費用，假若練習兩小時完畢後刪除所有內容，產生費用約 NT$7。而 Azure DevOps 無須信用卡即可擁有 5 位用戶免費使用並提供每月 1,800 分鐘 CI/CD 免費建構時數，因此在整個實機練習過程 Azure DevOps 將不會有費用產生。
+在練習過程中使用 Azure App Service Web App for Containers Linux 基本服務方案 B1 等級規格，每一個執行個體每小時產生 NT$0.91 費用，每月產生約 NT$593 費用，Azure Container Regisrty 基本版則是每月產生約 NT$155 費用，實機練習完畢後如果將相關 Azure 資源刪除就不再產生任何費用，假若練習兩小時完畢後刪除所有內容，產生費用約 NT$7。而 Azure DevOps 無須信用卡即可擁有 5 位用戶免費使用並提供每月 1,800 分鐘 CI/CD 免費建構時數，因此在整個實機練習過程 Azure DevOps 將不會有費用產生。
 
 ## Azure DevOps 相關資源
 * [Azure DevOps 首頁與免費帳號申請](https://azure.microsoft.com/zh-tw/services/devops/)
@@ -50,7 +50,7 @@
 * [前往練習 Lab 1](Labs-01.md) : 在 Azure DevOps 內建立組織 (Organization) 與專案 (Project)
 * [前往練習 Lab 2](Labs-02.md) : 在 Azure DevOps 內建立儲存庫 (Repos) 並加入程式碼
 * [前往練習 Lab 3](Labs-03.md) : 建立 Azure Container Registry 並推送 Docker 映像檔
-* [前往練習 Lab 4](Labs-04.md) : <待定>
+* [前往練習 Lab 4](Labs-04.md) : 建立 Azure Web App for Containers Linux
 * [前往練習 Lab 5](Labs-05.md) : <待定>
 * [前往練習 Lab 6](Labs-06.md) : <待定>
 * [前往練習 Lab 7](Labs-07.md) : <待定>

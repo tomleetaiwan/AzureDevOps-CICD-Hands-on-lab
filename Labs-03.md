@@ -89,8 +89,8 @@ az acr credential show -n <ACR 名稱>
 
 請保留本 Lab 所建立之環境，並記錄
 * Azure Container Registy (ACR) 名稱
-* Azure Container Registy (ACR) 系統管理帳號
-* Azure Container Registy (ACR) 系統管理密碼
+* Azure Container Registy (ACR) 管理帳號
+* Azure Container Registy (ACR) 管理密碼
 
 以供後續 Lab 使用。
 

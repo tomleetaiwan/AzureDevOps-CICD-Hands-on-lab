@@ -123,11 +123,11 @@ jobs:
 
 執行結果無論成功或失敗都會被記錄在 **Auzre DevOps Pipelines**，如果一切順利應會看到如圖的畫面
 
-![Azure DevOps Pipelines 設定畫面](images/build-result1.png)
+![Azure DevOps Pipelines 完成畫面](images/build-result1.png)
 
 以瀏覽器進入 [Azure Portal](https://portal.azure.com) 在之前所建立的 Azure Container Registry 之中應該會看到由 Azure DevOps Pipelines 剛剛推送進來的 Docker 映像檔，在我們的 YAML 檔案中會以 Pipeline 執行時流水號 BuildId 來作為 映像檔的標籤，BuildId 會是一個正整數，您環境中或許標籤內容會與畫面中不同，但可以看出跟 Lab 3 自行定義的 0.1 並存於 Azure Container Registry 內，至此代表本 Lab 已經順利完成。
 
-![Azure DevOps Pipelines 設定畫面](images/build-result2.png)
+![以瀏覽器進入 Azure Portal 驗證](images/build-result2.png)
 
 
 * [前往練習 Lab 7](Labs-07.md)

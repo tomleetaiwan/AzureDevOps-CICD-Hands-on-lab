@@ -11,6 +11,7 @@
 * [Azure DevOps 文件首頁](https://docs.microsoft.com/zh-tw/azure/devops/)
 * [Azure DevOps Labs](https://www.azuredevopslabs.com/)
 * [DevOps Resource Center](https://docs.microsoft.com/zh-tw/azure/devops/learn/)
+* [Pro Git book](https://git-scm.com/book/zh-tw/v2)
 * [為你自己學 Git](https://gitbook.tw/)
 
 ## Docker 與 Microsoft Windows 相關資源

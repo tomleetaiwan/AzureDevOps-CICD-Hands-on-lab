@@ -28,7 +28,11 @@ az webapp config appsettings set -n <Azure Web App 名稱> -g myDevOpsResourceGr
 
 ![以瀏覽器進入 Azure Portal 驗證](./images/webapp.png)
  
-請保留本 Lab 所建立之環境以供後續 Lab 使用。
+請保留本 Lab 所建立之環境，並記錄
+
+* Azure Web App 名稱
+
+以供後續 Lab 使用。
 
 * [前往練習 Lab 5](Labs-05.md)
 * [返回 README](README.md)

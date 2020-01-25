@@ -27,7 +27,7 @@ Azure DevOps Piplines 建構流程如圖所示是由 **Stage**,**Job**,**Step**,
 
 ![Azure DevOps Pipelines 基本概念](images/pipelines-overview.png)
 
-您可以將以下內容以剪貼方式取代原本 **Starter pipeline** 預設的 Pipeline 內容，亦可以[直接下載預先備妥之檔案使用](HelloWorldNodejs/azure-pipelines.yml)，請注意這個檔案中有三個變數值需要替換成前面 Lab 3 與 Lab 4 所建立的內容，請修改完畢後再進入一步驟。
+您可以將以下內容以剪貼方式取代原本 **Starter pipeline** 預設的 Pipeline 內容，亦可以[直接下載預先備妥之檔案使用](HelloWorldNodejs/azure-pipelines.yml)，請注意這個檔案中有兩個變數值需要替換成前面 Lab 3 與 Lab 4 所建立的內容，請修改完畢後再進入一步驟。
 
 ```yaml
 # 以 Docker Container 方式部署一個 Node.js 應用程式至 Azure Web App for Containers Linux
@@ -61,7 +61,7 @@ variables:
   WebApp.Name: '<您的 Azure Web App for Containers Linux 名稱>'
   
   # 變數 ServicePlan.Name 請填入您所建立的 Azure App Service Plan 名稱
-  ServicePlan.Name: '<您的 Azure App Service Plan 名稱>'
+  ServicePlan.Name: 'mydevops-appserviceplan'
 
   # 變數 MyImageName 請填入 Docker Image 標籤名稱，未來會以 MyImageName:Build# 方式放在 ACR 內
   MyImageName: 'nodejs-app'

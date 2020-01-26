@@ -1,6 +1,6 @@
 # Azure DevOps 持續整合/持續交付 (CI/CD,Continuous Integration Continuous Delivery) 功能實機操作
 
-## Lab 6 在 Azure DevOps 內建立管線 (Pipelines) 
+## Lab 6 在 Azure DevOps 內建立管線 (Pipelines) 自動佈署容器
 
 1.Azure DevOps Pipelines 能夠支援多種版本管控系統，將最新版本程式的建構與佈署自動化，減少人為手動參與降低出錯的機會，Azure DevOps Pipelines 支援各種程式語言的建構，本次實機練習將使用之前備妥的 Nodejs 網頁應用程式以容器形式佈署於 Azure Container Registry 與 Azure Web App for Containers Linux，將整個過程透過 Azure DevOps Pipelines 自動化，以期在持續整合/持續交付 ( CI/CD,Continuous Integration Continuous Delivery ) 過程中不再花費時間在瑣碎組態設定與人為操作細節上。
 
@@ -23,7 +23,7 @@
 
 ![Azure DevOps Pipelines 設定畫面](images/pipelines4.png)
 
-Azure DevOps Piplines 建構流程如圖所示是由 **Stage**,**Job**,**Step**,**Task** 所組合而成，當觸發條件發生時就會依據 YAML 定義的內容循序執行，對於簡單的情境可能只有單一 **Stage**，此時在 YAML 語法中可以被省略。當整個 Pipeline 執行完畢之後，產生的相關檔案可以送入 **Artifact** 保存下來，對於簡單的情境也可能直接佈署到可被執行的環境，以這次實機練習我們會直接將建立為的 Docker 容器推送到 Azure Container Registry，再從 Azure Container Registry 佈署到 Azure Web App for Containers Linux，不會有檔案放到 **Artifact**。
+Azure DevOps Piplines 建構流程如圖所示是由 **Stage**，**Job**，**Step**，**Task** 所組合而成，當觸發條件發生時就會依據 YAML 定義的內容循序執行，對於簡單的情境可能只有單一 **Stage**，此時在 YAML 語法中可以被省略。當整個 Pipeline 執行完畢之後，產生的相關檔案可以送入 **Artifact** 保存下來，對於簡單的情境也可能直接佈署到可被執行的環境，以這次實機練習我們會直接將建立為的 Docker 容器推送到 Azure Container Registry，再從 Azure Container Registry 佈署到 Azure Web App for Containers Linux，不會有檔案放到 **Artifact**。
 
 ![Azure DevOps Pipelines 基本概念](images/pipelines-overview.png)
 

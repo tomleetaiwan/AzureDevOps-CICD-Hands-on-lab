@@ -111,7 +111,7 @@ docker rm <CONTAINER ID> -f
 
 ![Visual Studo Code Commit](images/vscode1.png)
 
-13.如圖請在 Visual Studio Code 內點選版本管控 (Source Control) 圖示，接著按下 **....** 符號顯示更多操作之選單，在選端單點選 **Sync** 即開始本機與雲端 Azure DevOps Repos 儲存庫間進行檔案同步，這個動作等於在命令列下達 git pull 再 git push 是一樣的，如果您對於 Git 指令操作非常熟悉，想了解 Visual Studio Code Git 延伸模組到底做了什麼動作，可以在按下 **....** 符號顯示更多操作之選單中點選 **Show Git Output**，Visual Studio Code 會將所有延伸模組所下達之 Git 指令顯示於 **Output** 窗格 。
+13.如圖請在 Visual Studio Code 內點選版本管控 (Source Control) 圖示，接著按下 **....** 符號顯示更多操作之選單，在選端單點選 **Sync** 即開始本機與雲端 Azure DevOps Repos 儲存庫間進行檔案同步，這個動作等於在命令列下達 git pull 再 git push 是一樣的，如果您對於 Git 指令操作非常熟悉，想了解 Visual Studio Code Git 延伸模組到底做了什麼動作，可以在按下 **....** 符號顯示更多操作之選單中點選 **Show Git Output**，Visual Studio Code 會將所有延伸模組所下達之 Git 指令顯示於 **Output** 窗格。
 
 ![Visual Studio Code Git Sync](images/vscode2.png)
 

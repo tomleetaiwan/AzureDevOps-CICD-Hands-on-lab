@@ -1,6 +1,6 @@
 # Azure DevOps 持續整合/持續交付 (CI/CD,Continuous Integration Continuous Delivery) 功能實機操作
 
-## Lab 4 建立 Azure Web App for Containers Linux
+## Lab 4 建立 Azure Web App for Containers Linux 手動佈署容器
 
 1.要建立 Azure Web App for Containers Linux 之前，我們必須先建立妥 App Service Plan。建立的 App Service Plan 會定義 Azure Web App for Containers 所需之運算資源。我們將運用 Lab 3 已經建立的資源群組 myDevOpsResourceGroup 在命令列模式下達以下命令，將在東南亞機房建立一個名為 mydevops-appserviceplan 的 App Service Plan，此計畫中會包含一個基本層級 B1 等級的 Linux 執行個體。
 

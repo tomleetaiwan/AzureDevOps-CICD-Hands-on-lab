@@ -7,7 +7,7 @@
 * **Push an existing repository from command line** 將一個已經存在的資料夾透過 Git 命令列工具複製至此儲存庫
 * **Import a repository** 從其他 Git 儲存庫匯入到此儲存庫
 
-而畫面最下方，按下 **Initialize with README or gitignore** 相關按鈕，則會幫此儲存庫自動產生妥 REAME.md 說明檔案與忽略不需要被版本管理的檔案清單 .gitignore。
+而畫面最下方，按下 **Initialize with README or gitignore** 相關按鈕，則會幫此儲存庫自動產生妥 README.md 說明檔案與忽略不需要被版本管理的檔案清單 .gitignore。
 
 本次實機練習，我們以最簡單的方式，點選圖片右方 **Clone in VS Code** 按鈕，即可自動啟動 Windows 10 內安裝妥的 Visual Studio Code，當您在 Visual Studio Code 內選妥本機的一個資料夾之後，Visual Studio Code 便會將此空的儲存庫複製一份在您的電腦中。
 ![複製儲存庫至 Windows 10](images/repo-clone.png)
@@ -86,7 +86,7 @@ docker images
 ```powershell
 docker run -d -p 9999:9876 nodejs-app:0.1 
 ```
-10.開啟瀏覽器連線至此容器 http://localhost:9999 測試此 Nodejs 網頁應用程式，預期如下圖般順利執行回傳 **Hello Wolrd!** 字樣網頁，而畫面中則該顯示您的電腦名稱。
+10.開啟瀏覽器連線至此容器 http://localhost:9999 測試此 Nodejs 網頁應用程式，預期如下圖般順利執行回傳 **Hello Wolrd!** 字樣網頁。
 
 ![以瀏覽器測試](./images/browser2.png)
 
@@ -105,9 +105,12 @@ docker ps
 ```powershell
 docker rm <CONTAINER ID> -f
 ```
-此時開啟瀏覽器連線至本機 http://localhost:9999 將無法順利顯示網頁。至此代表開發中的應用程式已經在 Windows 10 開發環境測試告一段落，程式如我們預期可以順利執行，接下來我們即將把程式碼存放至本機的 Git 儲存庫以及雲端的 Azure DevOps Repo 儲存庫。
+此時開啟瀏覽器連線至本機 http://localhost:9999 將無法順利顯示網頁，因為容器已經不存在了。
 
-12.如圖請在 Visual Studio Code 內點選版本管控 (Source Control) 圖示，可以看到我們所建立的 Nodejs 應用程式 index.js 與 Dockerfile 等檔案，我們可以在文字方塊內輸入 "首次內容" 作為註解，接著按下 **✓** Commit 符號即可將相關檔案納入本機 Git 儲存庫的管理。Visual Studio Code 對於 Commit 操作預設是合併了 git add 與 git commit 兩個動作，對初學者而言是比較簡單。
+12.至此代表開發中的應用程式已經在 Windows 10 開發環境測試告一段落，程式如我們預期可以順利執行，接下來我們即將把程式碼存放至本機的 Git 儲存庫以及雲端的 Azure DevOps Repo 儲存庫。
+
+
+如圖請在 Visual Studio Code 內點選版本管控 (Source Control) 圖示，可以看到我們所建立的 Nodejs 應用程式 index.js 與 Dockerfile 等檔案，我們可以在文字方塊內輸入 "首次內容" 作為註解，接著按下 **✓** Commit 符號即可將相關檔案納入本機 Git 儲存庫的管理。Visual Studio Code 對於 Commit 操作預設是合併了 git add 與 git commit 兩個動作，對初學者而言是比較簡單。
 
 ![Visual Studo Code Commit](images/vscode1.png)
 

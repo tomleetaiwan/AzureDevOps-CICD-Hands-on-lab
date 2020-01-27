@@ -66,7 +66,7 @@ server.listen(port, ipv4, () => {
 一旦看到了新版本 Docker 映像檔已經出現，接著就可以利用瀏覽器連接網址 https://<Azure Web App 名稱>.azurewebsites.net/ 
 進行測試，我們應該會看到如下的畫面，新版本紅字字體的網頁應用程式已經在 Azure Web App for Containers Linux 上順利執行了。
 
-![以瀏覽器測試](./images/browser4.png)
+![以瀏覽器測試 Azure Web App URL](./images/browser4.png)
 
 * [刪除所建立的 Azure 資源群組](Labs-clear.md)
 * [返回 README](README.md)

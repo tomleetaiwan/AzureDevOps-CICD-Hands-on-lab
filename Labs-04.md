@@ -22,7 +22,7 @@ az webapp config appsettings set -n <Azure Web App 名稱> -g myDevOpsResourceGr
 
 3.以瀏覽器連接網址 https://<Azure Web App 名稱>.azurewebsites.net/ 進行測試，由於第一次瀏覽器瀏覽此網址時 Azure Web App for Containers Linux 才開始從 Azure Container Registry 拉取 Docker 映像檔，為了節費 B1 等級也非速度快的運算等級，因此第一次執行需要比較長的時間，第一次執行可能會出現 HTTP 502 或 HTTP 500 的錯誤訊息，這些都是容器尚未載入完成所產生的暫時錯誤，請稍後重新整理瀏覽器即可看到如下順利執行的畫面 :
 
-![以瀏覽器進入 Azure Portal 驗證](./images/browser3.png)
+![以瀏覽器測試 Azure Web App URL](./images/browser3.png)
 
 4.我們可用瀏覽器進入 [Azure Portal](https://portal.azure.com) 如下圖進入所建立的 Azure Web App for Containers Linu 點選 **Container settings**，即可看見之前 CLI 命令所建立與設定之內容。
 

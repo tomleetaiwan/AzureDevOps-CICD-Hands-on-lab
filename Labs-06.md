@@ -125,9 +125,11 @@ jobs:
 
 ![Azure DevOps Pipelines 完成畫面](images/build-result1.png)
 
-以瀏覽器進入 [Azure Portal](https://portal.azure.com) 在之前所建立的 Azure Container Registry 之中應該會看到由 Azure DevOps Pipelines 剛剛推送進來的 Docker 映像檔，在我們的 YAML 檔案中會以 Pipeline 執行時流水號 BuildId 來作為 映像檔的標籤，BuildId 會是一個正整數，您環境中或許標籤內容會與畫面中不同，但可以看出跟 Lab 3 自行定義的 0.1 並存於 Azure Container Registry 內，至此代表本 Lab 已經順利完成。
+以瀏覽器進入 [Azure Portal](https://portal.azure.com) 在之前所建立的 Azure Container Registry 之中應該會看到由 Azure DevOps Pipelines 剛剛推送進來的 Docker 映像檔，在我們的 YAML 檔案中會以 Pipeline 執行時流水號 BuildId 來作為 映像檔的標籤，BuildId 會是一個正整數，您環境中或許標籤內容會與畫面中不同，但可以看出跟 Lab 3 自行定義的 0.1 並存於 Azure Container Registry 內，到此，我們可以知道 Pipeline 管線內所有工作都已經順利完成。
 
-![以瀏覽器進入 Azure Portal 驗證](images/build-result2.png)
+6.最後以瀏覽器連接網址 https://<Azure Web App 名稱>.azurewebsites.net/ 進行測試，可以順利回傳 Hello World! 字樣網頁，雖然程式碼沒有變動，我們也可發現與 Lab 4 相同的網址回傳的電腦名稱已經不同，因為在 Azure Web App for Containers 已經使用新版本容器映像檔建立了新的容器，也因此 Container ID 也隨之改變，由於 Docker 容器的特性，這次新的容器映像檔沒有程式碼更動，佈署速度比起 Lab 4 快上很多。
+
+![以瀏覽器測試 Azure Web App URL](./images/browser3-1.png)
 
 
 * [前往練習 Lab 7](Labs-07.md)

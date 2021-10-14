@@ -4,7 +4,7 @@
 
 ![持續整合/持續交付](images/hybrid-ci-cd.png)
 
-在練習過程中使用 Azure App Service Web App for Containers Linux 基本服務方案 B1 等級規格，每一個執行個體每小時產生 NT$0.91 費用，每月產生約 NT$593 費用，Azure Container Regisrty 基本版則是每月產生約 NT$155 費用，實機練習完畢後如果將相關 Azure 資源刪除就不再產生任何費用，假若練習兩小時完畢後刪除所有內容，產生費用約 NT$7。而 Azure DevOps 無須信用卡即可擁有 5 位用戶免費使用並提供每月 1,800 分鐘 CI/CD 免費建構時數，因此在整個實機練習過程 Azure DevOps 將不會有費用產生。
+在練習過程中使用 Azure App Service Web App for Containers Linux 基本服務方案 B1 等級規格，每一個執行個體每小時產生 NT$0.91 費用，每月產生約 NT$593 費用，Azure Container Regisrty 基本版則是每月產生約 NT$155 費用，實機練習完畢後如果將相關 Azure 資源刪除就不再產生任何費用，假若練習兩小時完畢後刪除所有內容，產生費用約 NT$7。而 Azure DevOps 無須信用卡即可擁有 5 位用戶免費使用並提供每月 1,800 分鐘 Azure DevOps Pipelines CI/CD 免費建構時數，因此在整個實機練習過程 Azure DevOps 將不會有費用產生。為了避免 Azure DevOps Pipelines 每月 1,800 分鐘 CI/CD 資源遭到濫用，自 2021 年 3 月起，請依據 https://docs.microsoft.com/zh-tw/azure/devops/release-notes/2021/sprint-184-update 說明寄送電子郵件至 azpipelines-freetier@microsoft.com 說明用途，申請免費 1,800 分鐘 CI/CD 資源。
 
 ## Azure DevOps 相關資源
 * [Azure DevOps 首頁與免費帳號申請](https://azure.microsoft.com/zh-tw/services/devops/)
